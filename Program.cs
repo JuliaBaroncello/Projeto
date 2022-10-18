@@ -11,39 +11,71 @@ namespace Projeto
             List<string> nomes = new List<string>();
             List<int> idades = new List<int>();
             List<double> notas = new List<double>();
-            double soma = 0.0;
-            for (int i = 0; i < 10; i++)
-            {
-                Console.WriteLine($"Digite o nome do {i+1}º aluno: ");
-                string? entrada1 = Console.ReadLine();
-                Console.WriteLine($"Digite a idade do {i+1}º aluno: ");
-                string? entrada2 = Console.ReadLine();
-                Console.WriteLine($"Digite a nota do {i+1}º aluno: ");
-                string? entrada3 = Console.ReadLine();
-                int idade;
-                double nota;
-                bool verifica2 = int.TryParse(entrada2, out idade);
-                bool verifica3 = double.TryParse(entrada3, out nota);
-                if (entrada1 != null) {
-                    string nome = entrada1.ToString();
-                    nomes.Add(nome);
-                } else {
-                    Console.WriteLine($"O nome do aluno não pode ser nulo.");
+            double somaNotas = 0.0;
+            Console.WriteLine($"Insira a quantidade de alunos da turma: ");
+            string? valor = Console.ReadLine();
+            int tam;
+            bool valida = int.TryParse(valor, out tam);
+            if (valida == true) {
+                for (int i = 0; i < tam; i++) {
+                    Console.WriteLine($"Digite o nome do {i+1}º aluno: ");
+                    string? entrada1 = Console.ReadLine();
+                    Console.WriteLine($"Digite a idade do {i+1}º aluno: ");
+                    string? entrada2 = Console.ReadLine();
+                    Console.WriteLine($"Digite a nota do {i+1}º aluno: ");
+                    string? entrada3 = Console.ReadLine();
+                    int idade;
+                    double nota;
+                    bool verifica2 = int.TryParse(entrada2, out idade);
+                    bool verifica3 = double.TryParse(entrada3, out nota);
+                    if (entrada1 != null) {
+                        string nome = entrada1.ToString();
+                        nomes.Add(nome);
+                    } else {
+                        Console.WriteLine($"O nome do aluno não pode ser nulo.");
+                    }
+                    if (verifica2 == true) {
+                        idades.Add(idade);
+                    } else {
+                        Console.WriteLine($"A idade do aluno não pode ser nula.");
+                    }
+                    if (verifica3 == true) {
+                        notas.Add(nota);
+                        somaNotas += nota;
+                    } else {
+                        Console.WriteLine($"A nota do aluno não pode ser nula.");
+                    }
                 }
-                if (verifica2 == true) {
-                    idades.Add(idade);
-                } else {
-                    Console.WriteLine($"A idade do aluno não pode ser nula.");
+                double mediaNotas = (somaNotas / tam) / 10;
+                Console.WriteLine($"A média das notas da turma é {mediaNotas}");
+                double maiorNota = 0;
+                for (int j = 0; j < tam; j++) {
+                    if (notas[j] > maiorNota) {
+                        maiorNota = notas[j];
+                    }
                 }
-                if (verifica3 == true) {
-                    notas.Add(nota);
-                    soma += nota;
-                } else {
-                    Console.WriteLine($"A nota do aluno não pode ser nula.");
+                Console.WriteLine($"A maior nota foi {maiorNota/10}");
+                Console.WriteLine($"Os nomes dos alunos em ordem alfabética são: ");
+                nomes.Sort();
+                foreach (var nome in nomes)
+                {
+                    Console.WriteLine(nome);
                 }
+                Console.WriteLine($"As idades dos alunos em ordem crescente são: ");
+                idades.Sort();
+                foreach (var idade in idades)
+                {
+                    Console.WriteLine(idade);
+                }
+                Console.WriteLine($"As notas dos alunos em ordem crescente são: ");
+                notas.Sort();
+                foreach (var nota in notas)
+                {
+                    Console.WriteLine(nota/10);
+                }
+            } else {
+                Console.WriteLine($"A quantidade precisa ser um valor válido.");
             }
-            double media = soma / notas.Count;
-            Console.WriteLine($"A média da turma é {media}");   
         }
     }
 }
