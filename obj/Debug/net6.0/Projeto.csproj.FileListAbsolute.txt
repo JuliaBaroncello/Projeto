@@ -1,0 +1,15 @@
+/home/clarice/Área de Trabalho/CSharp/Projeto/bin/Debug/net6.0/Projeto
+/home/clarice/Área de Trabalho/CSharp/Projeto/bin/Debug/net6.0/Projeto.deps.json
+/home/clarice/Área de Trabalho/CSharp/Projeto/bin/Debug/net6.0/Projeto.runtimeconfig.json
+/home/clarice/Área de Trabalho/CSharp/Projeto/bin/Debug/net6.0/Projeto.dll
+/home/clarice/Área de Trabalho/CSharp/Projeto/bin/Debug/net6.0/Projeto.pdb
+/home/clarice/Área de Trabalho/CSharp/Projeto/obj/Debug/net6.0/Projeto.csproj.AssemblyReference.cache
+/home/clarice/Área de Trabalho/CSharp/Projeto/obj/Debug/net6.0/Projeto.GeneratedMSBuildEditorConfig.editorconfig
+/home/clarice/Área de Trabalho/CSharp/Projeto/obj/Debug/net6.0/Projeto.AssemblyInfoInputs.cache
+/home/clarice/Área de Trabalho/CSharp/Projeto/obj/Debug/net6.0/Projeto.AssemblyInfo.cs
+/home/clarice/Área de Trabalho/CSharp/Projeto/obj/Debug/net6.0/Projeto.csproj.CoreCompileInputs.cache
+/home/clarice/Área de Trabalho/CSharp/Projeto/obj/Debug/net6.0/Projeto.dll
+/home/clarice/Área de Trabalho/CSharp/Projeto/obj/Debug/net6.0/refint/Projeto.dll
+/home/clarice/Área de Trabalho/CSharp/Projeto/obj/Debug/net6.0/Projeto.pdb
+/home/clarice/Área de Trabalho/CSharp/Projeto/obj/Debug/net6.0/Projeto.genruntimeconfig.cache
+/home/clarice/Área de Trabalho/CSharp/Projeto/obj/Debug/net6.0/ref/Projeto.dll
