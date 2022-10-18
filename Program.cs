@@ -12,17 +12,17 @@ namespace Projeto
             List<int> idades = new List<int>();
             List<double> notas = new List<double>();
             double somaNotas = 0.0;
-            Console.WriteLine($"Insira a quantidade de alunos da turma: ");
+            Console.Write($"Insira a quantidade de alunos da turma: ");
             string? valor = Console.ReadLine();
             int tam;
             bool valida = int.TryParse(valor, out tam);
             if (valida == true) {
                 for (int i = 0; i < tam; i++) {
-                    Console.WriteLine($"Digite o nome do {i+1}º aluno: ");
+                    Console.Write($"Digite o nome do {i+1}º aluno: ");
                     string? entrada1 = Console.ReadLine();
-                    Console.WriteLine($"Digite a idade do {i+1}º aluno: ");
+                    Console.Write($"Digite a idade do {i+1}º aluno: ");
                     string? entrada2 = Console.ReadLine();
-                    Console.WriteLine($"Digite a nota do {i+1}º aluno: ");
+                    Console.Write($"Digite a nota do {i+1}º aluno: ");
                     string? entrada3 = Console.ReadLine();
                     int idade;
                     double nota;
@@ -57,24 +57,24 @@ namespace Projeto
                 Console.WriteLine($"A maior nota foi {maiorNota/10}");
                 Console.WriteLine($"Os nomes dos alunos em ordem alfabética são: ");
                 nomes.Sort();
-                foreach (var nome in nomes)
+                foreach (string nome in nomes)
                 {
                     Console.WriteLine(nome);
                 }
                 Console.WriteLine($"As idades dos alunos em ordem crescente são: ");
                 idades.Sort();
-                foreach (var idade in idades)
+                foreach (int idade in idades)
                 {
                     Console.WriteLine(idade);
                 }
                 Console.WriteLine($"As notas dos alunos em ordem crescente são: ");
                 notas.Sort();
-                foreach (var nota in notas)
+                foreach (double nota in notas)
                 {
                     Console.WriteLine(nota/10);
                 }
             } else {
-                Console.WriteLine($"A quantidade precisa ser um valor válido.");
+                Console.WriteLine($"A quantidade de alunos precisa ser um valor válido.");
             }
         }
     }
