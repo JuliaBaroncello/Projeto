@@ -67,11 +67,16 @@ namespace Projeto
                 {
                     Console.WriteLine(idade);
                 }
-                Console.WriteLine($"As notas dos alunos em ordem crescente são: ");
+                Console.WriteLine($"As notas dos alunos da menor para a maior são: ");
                 notas.Sort();
                 foreach (double nota in notas)
                 {
                     Console.WriteLine(nota/10);
+                }
+                Console.WriteLine($"As notas dos alunos da maior para a menor são: ");
+                for (int k = tam - 1; k >= 0; k--)
+                {
+                    Console.WriteLine(notas[k]/10);
                 }
             } else {
                 Console.WriteLine($"A quantidade de alunos precisa ser um valor válido.");
